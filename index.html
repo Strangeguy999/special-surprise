@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Surprise for You 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="main-container">
+
+        <div class="screen active" id="screen1">
+            <img src="photo.jpg" alt="Surprise" class="friend-photo"> 
+            
+            <div class="emoji-header">🎉</div>
+            <h1>Birthday hai aaj kisika......</h1>
+            <h1 class="bold-text">LET'S GOOOOOO</h1>
+            <div class="emoji-footer">🎈</div>
+            <button class="next-btn" onclick="nextScreen(2)">...Ek surprise hai Cutie ke liye? 🎁</button>
+        </div>
+
+        <div class="screen" id="screen2">
+            <img src="https://em-content.zobj.net/source/microsoft-teams/363/bear_1f43b.png" alt="Cute Bears" class="bear-img">
+            <p>Ready ho next surprise ke liye?</p>
+            <div class="btn-group">
+                <button class="yes-btn" onclick="nextScreen(3)">Haan! 🥰</button>
+                <button class="no-btn" onclick="nextScreen(1)">Nahi 🥺</button> </div>
+        </div>
+
+        <div class="screen" id="screen3">
+            <h2>Phodo in balloons ko! 🎈</h2>
+            <p>Revealed words ko yaad rakhna</p>
+            <div class="balloon-container">
+                <div class="balloon" onclick="popBalloon(this, 'You')"><span>🎈</span></div>
+                <div class="balloon" onclick="popBalloon(this, 'Are')"><span>🎈</span></div>
+                <div class="balloon" onclick="popBalloon(this, 'So')"><span>🎈</span></div>
+                <div class="balloon" onclick="popBalloon(this, 'Special')"><span>🎈</span></div>
+            </div>
+            <div id="message-reveal"></div>
+            <button class="next-btn hidden" id="to-candle-btn" onclick="nextScreen(4)">Aage Chalein? 👉</button>
+        </div>
+
+        <div class="screen" id="screen4">
+            <h2>Ek wish maango Taraaaa... ✨</h2>
+            <div class="cake-container">
+                <img src="https://em-content.zobj.net/source/microsoft-teams/363/birthday-cake_1f382.png" alt="Cake" class="cake-img">
+                <div class="flame" id="candle-flame">🔥</div>
+            </div>
+            <button class="blow-btn" id="blow-btn" onclick="blowCandle()">Tap to blow the candle 🌬️</button>
+            <button class="next-btn hidden" id="to-bouquet-btn" onclick="nextScreen(5)">Wish maang li? Click karo!</button>
+        </div>
+
+        <div class="screen" id="screen5">
+            <div class="floating-msgs">
+                <span class="msg">Forever Yours</span>
+                <span class="msg">You are one of my favourite</span>
+                <span class="msg">I love you so much</span>
+            </div>
+            <img src="https://em-content.zobj.net/source/microsoft-teams/363/bouquet_1f490.png" alt="Rose Bouquet" class="bouquet-img">
+            <h1>Happy Birthday, Amulyaaaa ji! ❤️</h1>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
